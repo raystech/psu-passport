@@ -1,5 +1,6 @@
 ## PSU Passport Authentication for Laravel 5
 Hey! This package is still a Work in Progress. Files, instructions, and other stuff might change!
+
 ## Installation
 Require this package in your composer.json and update composer. This will download the package and PSU Passport.
 
@@ -17,6 +18,42 @@ You can use the facade for shorter code; if using Laravel 5.4 or lower, add this
 'PSUPassport' => Raystech\PSUPassport\Facades\Passport::class,
 ```
 
+## Usage
+Import to controller
+```php
+use PSUPassport;
+```
+
+## Basic example
+Send credentials to authenticate
+```php
+$credentials = ['username' => '', 'password' => ''];
+$user = PSUPassport::authenticate($credentials);
+```
+
+Return authentication result
+```php
+$user->auth();
+```
+
+Return user details e.g.
+- username
+- title
+- firstname
+- lastname
+- gender
+- personal id
+- email
+- major
+- campus
+```php
+$user->getUserDetails();
+```
+
+Return staff details
+```php
+$user->getStaffDetails();
+```
 
 ## License
 This package is licensed under MIT. You can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. 
