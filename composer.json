@@ -1,0 +1,21 @@
+{
+  "name": "raystech/psu-passport",
+  "description": "PSU Passport Authentication for Laravel",
+  "authors": [
+    {
+      "name": "Piyapan Rodkuen",
+      "email": "piyapannr@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.0",
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Raystech\\PSUPassport\\PSUPassportServiceProvider"
+      ],
+    }
+  },
+}
