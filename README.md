@@ -11,6 +11,12 @@ Add the ServiceProvider to the providers array in config/app.php
 ```php
 Raystech\PSUPassport\PSUPassportServiceProvider::class,
 ```
+You can use the facade for shorter code; if using Laravel 5.4 or lower, add this to your aliases:
+
+```php
+'PSUPassport' => Raystech\PSUPassport\Facades\Passport::class,
+```
+
 
 ## License
 This package is licensed under MIT. You can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. 
