@@ -18,8 +18,7 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "php": "^7.0",
-    "raystech/psu-passport": "dev-master"
+    "php": "^7.0"
   },
   "extra": {
     "laravel": {
