@@ -13,7 +13,7 @@ Raystech\PSUPassport\PSUPassportServiceProvider::class,
 ```
 
 ## License
-This package is licensed under GPL. You are free to use it in personal and commercial projects. The code can be forked and modified, but the original copyright author should always be included!
+This package is licensed under MIT. You can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. 
 
 ## Credit
 - Facebook: [Piyapan Rodkuen](https://facebook.com/rayspic)
