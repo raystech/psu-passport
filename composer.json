@@ -1,6 +1,8 @@
 {
   "name": "raystech/psu-passport",
   "description": "PSU Passport Authentication for Laravel",
+  "type": "laravel",
+  "license": "MIT",
   "authors": [
     {
       "name": "Piyapan Rodkuen",
@@ -14,7 +16,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Raystech\\PSUPassport\\PSUPassportServiceProvider"
+        "Raystech\\PSUPassport\\PassportServiceProvider"
       ]
     }
   }

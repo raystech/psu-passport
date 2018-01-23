@@ -4,14 +4,14 @@ namespace Raystech\PSUPassport;
 
 use Illuminate\Support\ServiceProvider;
 
-class PSUPassportServiceProvider extends ServiceProvider {
+class PassportServiceProvider extends ServiceProvider {
 	/**
 	 * Bootstrap the application services.
 	 *
 	 * @return void
 	 */
 	public function boot() {
-		//
+		include __DIR__ . '/routes.php';
 	}
 
 	/**
@@ -20,7 +20,9 @@ class PSUPassportServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		include __DIR__ . '/routes.php';
-		$this->app->make('Raystech\PSUPassport\PassportController');
+		$this->app->bind('psu-passport', function () {
+			return new Passport();
+		});
+		//$this->app->make('Raystech\PSUPassport\PassportController');
 	}
 }

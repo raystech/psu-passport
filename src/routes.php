@@ -1,3 +1,3 @@
 <?php
 
-Route::get('passport', 'Raystech\PSUPassport\PassportController@index');
+Route::get('passport', 'Raystech\PSUPassport\Passport@index');
