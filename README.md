@@ -5,7 +5,7 @@ Hey! This package is still a Work in Progress. Files, instructions, and other st
 Require this package in your composer.json and update composer. This will download the package and PSU Passport.
 
 ```php
-composer require "raystech/psu-passport:~1.2"
+composer require "raystech/psu-passport:^1.2"
 ```
 
 >If you're using Laravel 5.5 or higher you can skip the two config setups below.
