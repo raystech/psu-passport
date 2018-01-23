@@ -1,17 +1,19 @@
 {
   "name": "raystech/psu-passport",
   "description": "PSU Passport Authentication for Laravel",
+  
   "type": "laravel",
   "license": "MIT",
   "authors": [
     {
       "name": "Piyapan Rodkuen",
-      "email": "piyapannr@gmail.com"
+      "email": "piyapannr@gmail.com",
+      "homepage": "https://github.com/raystech/"
     }
   ],
   "autoload": {
     "psr-4": {
-      "PSUPassport\\": "src/"
+      "Raystech\\PSUPassport\\": "src/"
     }
   },
   "minimum-stability": "dev",
@@ -26,10 +28,7 @@
       ],
       "aliases": {
         "PSUPassport": "Raystech\\PSUPassport\\Facades\\Passport"
-      },
-      "dont-discover": [
-        "*"
-      ]
+      }
     }
   }
 }
