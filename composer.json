@@ -9,14 +9,26 @@
       "email": "piyapannr@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "PSUPassport\\": "src/"
+    }
+  },
   "minimum-stability": "dev",
   "require": {
-    "php": "^7.0"
+    "php": "^7.0",
+    "raystech/psu-passport": "dev-master"
   },
   "extra": {
     "laravel": {
       "providers": [
         "Raystech\\PSUPassport\\PassportServiceProvider"
+      ],
+      "aliases": {
+        "PSUPassport": "Raystech\\PSUPassport\\Facades\\Passport"
+      },
+      "dont-discover": [
+        "*"
       ]
     }
   }
