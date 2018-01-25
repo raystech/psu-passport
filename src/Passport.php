@@ -67,7 +67,10 @@ class Passport extends Controller {
 	}
 
 	public function status() {
-		//dd($this->getUserDetails());
-		
+		if(!$this->auth) {
+			return false;
+		} else {
+			return $this->getUserDetails()->status;
+		}
 	}
 }
