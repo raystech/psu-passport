@@ -39,7 +39,7 @@ Return authentication result
 $user->auth();
 ```
 
-Return user details e.g.
+Return user details object e.g.
 - username
 - title
 - firstname
@@ -47,17 +47,24 @@ Return user details e.g.
 - gender
 - personal id
 - email
-- major
+- affiliation
 - campus
+- status
+- details(array)
+
 ```php
 $user->getUserDetails();
 ```
 
-Return staff details
+Return staff details array
 ```php
 $user->getStaffDetails();
 ```
 
+Return user status e.g. Students, Staffs, Temporary Users
+```php
+$user->status();
+```
 ## License
 This package is licensed under MIT. You can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. 
 
