@@ -46,10 +46,10 @@ class Passport extends Controller {
 		$userDetails->gender = $this->userDetails[4];
 		$userDetails->pid = $this->userDetails[5];
 		$userDetails->email = $this->userDetails[13];
-		//$userDetails->lastname = $this->userDetails[6];
-		//$userDetails->lastname = $this->userDetails[7];
-		$userDetails->major = $this->userDetails[8];
+		$userDetails->affiliation = $this->userDetails[8];
 		$userDetails->campus = $this->userDetails[10];
+
+		$userDetails->details = explode(',', $this->userDetails[14]);
 
 		return $userDetails;
 	}
