@@ -30,11 +30,11 @@ class Passport extends Controller {
 		$this->auth = $this->soapClient->Authenticate($this->credentials)->AuthenticateResult;
 		if ($this->auth) {
 			$this->username = $credentials['username'];
-			return $this;
 		}
-		return null;
+		return $this;
 	}
 	public function getUserDetails() {
+		if(!$this->auth) return false;
 		$this->objUserDetails = $this->soapClient->GetUserDetails($this->credentials);
 		$this->userDetails = $this->objUserDetails->GetUserDetailsResult->string;
 		$userDetails = new \stdClass();
@@ -49,7 +49,9 @@ class Passport extends Controller {
 		$userDetails->affiliation = $this->userDetails[8];
 		$userDetails->campus = $this->userDetails[10];
 
-		$userDetails->details = explode(',', $this->userDetails[14]);
+		$details_tmp = explode(',', $this->userDetails[14]);
+		$userDetails->status = explode('=', $details_tmp[4])[1];
+		$userDetails->details = $details_tmp;
 
 		return $userDetails;
 	}
@@ -57,9 +59,15 @@ class Passport extends Controller {
 	public function getStaffDetails() {
 		$this->objStaffDetails = $this->soapClient->GetStaffDetails($this->credentials);
 		$this->staffDetails = $this->objStaffDetails->GetStaffDetailsResult->string;
+		return $this->staffDetails;
 	}
 
 	public function auth() {
 		return $this->auth;
+	}
+
+	public function status() {
+		//dd($this->getUserDetails());
+		
 	}
 }
